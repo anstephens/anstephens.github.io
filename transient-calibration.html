@@ -1,0 +1,128 @@
+\documentclass[10pt]{article}
+\usepackage[usenames]{color} %used for font color
+\usepackage{amssymb} %maths
+\usepackage{amsmath} %maths
+\usepackage[utf8]{inputenc} %useful to type directly diacritic characters
+\begin{document}
+\begin{align*}<!DOCTYPE HTML>
+<!--
+	Twenty by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Alexandra N. Stephens</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="index is-preload">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<header id="header">
+					<h1 id="logo"><a href="index.html">Alexandra N. Stephens<span> | Ph.D. Candidate at the University of Texas |</span></a></h1>
+					<nav id="nav">
+						<ul>
+							<li class="nav"><a href="index.html">Home</a></li>
+							<li class="submenu-current">
+										<a href="research-home.html">Research</a>
+										<ul>
+											<li><a href="transient-calibration.html">Transient Calibration</a></li>
+											<li><a href="seasonality.html">Seasonality</a></li>
+											<li><a href="aster-dems.html">ASTER DEM Correction</a></li>
+										</ul>
+									</li>
+							<li class="nav"><a href="outreach.html">Outreach & Volunteering</a></li>
+							<li class="nav"><a href="cv.html">CV</a></li>
+							<li class="nav"><a href="some-thoughts.html">Some Thoughts</a></li>
+
+						</ul>
+					</nav>
+				</header>
+
+			<!-- Main -->
+				<article id="main">
+
+					<header class="special container">
+						<span class="icon fa-chart-area"></span>
+						</br>
+						<h2 style="text-align:center">Transient Calibration using STREAMICE</h2>
+					</header>
+					
+
+					<!-- One -->
+						<section class="wrapper style4 container">
+							<h3>What is transient calibration?</h3>
+							<p style="text-align:justify">My main research interest is modeling ice sheets with adjoint models using transient calibration. Adjoint models are a mathematical approach to calculate gradients of scalar-valued models constrained by input parameters. Instead of inputting a scalar value and running a model forward through time to calculate the sensitivity of a variable of interest, an adjoint model inputs many variables and steps backwards through time, computing the gradient using a single model evaluation and outputting the sensitivity of the model to the set of inputs. The output of the adjoint model is the gradient field of a desired variable with respect to the independent constraints. The “cost” function is the difference between observed data, which calibrates the model, and the model outputs. Adjoint models minimize this cost function, providing projections that are truer to existing observations compared with forward models. The output of an adjoint model is then an estimate of the gradient field that reduces the misfit of the results to the observations.</p>
+							<figure class="image featured"><img src="images/rnk-inv.jpg" alt="" /></figure>
+										<figcaption><em>Snapshot inversion for velocity at Rink Glacier in Greenland. Model output on left, observed data on right.</em></figcaption>
+							</br>
+							<p style="text-align:justify">Traditional adjoint models calculate the gradient field at a single point in time, called a "state estimate" or "snapshot inversion". The model reduces the misfit of spatial data at a set point in time. Using a novel approach called transient calibration, the data misfit can be reduced with respect to both spatial and temporal data, allowing the modeler to input data at various time points and calibrating the model to fit this time-dependent variability. The resulting model can be used to fit corresponding forward models to observations based on the sensitivity of model-data differences. This provides an effective means for data assimilation and enables the model sensitivity to tell what observations are most critical for monitoring future ice sheet change and investigating the dynamics of ice sheets.</p>
+
+
+							<!-- Content -->
+								<div class="content">
+									<section>
+										<figure class="image featured"><img src="images/jak-inv.jpg" alt="" /></figure>
+										<figcaption><em>Snapshot inversion for velocity at Jakobshavn Glacier in Greenland. Model output on left, observed data on right.</em></figcaption>
+										</br>
+										<header>
+											<h3>How are adjoints used to understand glaciers?</h3>
+										</header>
+				
+										<p style="text-align:justify">I am using the <a href="https://mitgcm.readthedocs.io/en/latest/phys_pkgs/streamice.html">MITgcm package STREAMICE</a> to improve understanding of how basal friction and ice rheology have driven changes to ice velocity in coastal west Greenland. The results of these transient calibrations can be used to more accurately initialize forward models, predicting future mass loss that better reflects observations. STREAMICE has been used to model glaciers and ice shelves in Antarctica, but it has not yet been adapted for use in Greenland. Working with STREAMICE developer <a href="https://dngoldberg.github.io">Dr. Dan Goldberg</a> (University of Edinburgh), I am adjusting the model for use in central west Greenland.</p>
+									</section>
+								</div>
+
+						</section>
+			<!-- CTA -->
+				<section id="cta">
+
+				</section>
+
+			<!-- Footer -->
+				<footer id="footer">
+				
+					<ul class="copyright">
+						<p>Get in touch at <a href="mailto:anstephens@utexas.edu"><b>anstephens@utexas.edu</b></a><p>
+					</ul>
+
+					<ul class="icons">
+						<li><a href="https://github.com/anstephens" class="icon brands circle fa-github"><span class="label">Github</span></a></li>
+						<li><a href="https://www.linkedin.com/in/astephens4/" class="icon brands circle fa-linkedin"><span class="label">Linkedin</span></a></li>
+					</ul>
+					
+					<ul class="subnote">
+						<p>Bear with me as a baby researcher while I grow and update this page (...particularly my git repo...)</p>
+					</ul>
+
+					<ul class="copyright">
+						<li>&copy; Alexandra N. Stephens</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+					
+					<ul class="note">
+						<p>Last updated March 19, 2023</p>
+					</ul>
+
+
+				</footer>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollgress.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>\end{align*}
+\end{document}
